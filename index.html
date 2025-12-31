@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year 🎉</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        color: rgb(199, 77, 201);
+        text-align: center;
+    }
+
+    .cracker {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: red;
+        border-radius: 50%;
+        animation: explode 1.5s infinite;
+    }
+
+    @keyframes explode {
+        0% { transform: scale(1); opacity: 1; }
+        100% { transform: scale(20); opacity: 0; }
+    }
+
+    .card {
+        margin-top: 40px;
+        font-size: 40px;
+        display: none;
+        animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.8); }
+        to { opacity: 1; transform: scale(1); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="cracker"></div>
+
+<div class="card" id="card">
+    🎉✨ Happy New Year 2026 ✨🎉<br>
+    May your life sparkle with joy!
+</div>
+
+<script>
+    setTimeout(() => {
+        document.querySelector('.cracker').style.display = 'none';
+        document.getElementById('card').style.display = 'block';
+    }, 3000);
+</script>
+
+</body>
+</html>
